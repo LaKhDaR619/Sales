@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 import {Avatar, Title, Drawer} from 'react-native-paper';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -39,6 +39,15 @@ function DrawerContent(props) {
               label={words.home}
               onPress={() => {
                 props.navigation.navigate('Home');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Entypo name="shopping-cart" color={color} size={size} />
+              )}
+              label={words.orders}
+              onPress={() => {
+                props.navigation.navigate('Orders');
               }}
             />
             <DrawerItem
@@ -83,7 +92,7 @@ function DrawerContent(props) {
       <Drawer.Section style={styles.bottomDrawerSection}>
         <DrawerItem
           icon={({color, size}) => (
-            <Icon name="logout" color={color} size={size} />
+            <MaterialCommunityIcons name="logout" color={color} size={size} />
           )}
           label={words.logout}
           onPress={() => {

@@ -48,7 +48,6 @@ function EditProductScreen({
 
   useFocusEffect(
     React.useCallback(() => {
-      route.params.firstRender = false;
       setSelectedCat(route.params.selectedCat);
       setSelectedLabel(route.params.selectedLabel);
       setBarCode(route.params.barcode);
@@ -61,11 +60,6 @@ function EditProductScreen({
   useEffect(() => {
     getAllCategories();
   }, []);
-
-  useEffect(() => {
-    console.log('route.params');
-    console.log(route.params);
-  });
 
   // input Stuff
   const checkInputs = () => {

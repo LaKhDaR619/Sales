@@ -114,5 +114,6 @@
   "categories": "الأصناف",
   "adduser": "إضافة مستخدم",
   "usertype": "نوع المستخدم",
-  "confirmorder": "تأكيد الطلب"
+  "confirmorder": "تأكيد الطلب",
+  "subText": "التطبيق الذي تحتاجه"
 }
