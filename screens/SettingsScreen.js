@@ -3,7 +3,7 @@ import {StyleSheet, View, ActivityIndicator} from 'react-native';
 
 import {useFocusEffect} from '@react-navigation/native';
 
-import {CheckBox, Button} from 'react-native-elements';
+import {Button} from 'react-native-elements';
 import MyDropPicker from '../Components/MyDropPicker';
 import Header from '../Components/Header';
 import {connect} from 'react-redux';
@@ -11,11 +11,8 @@ import {getObject} from '../BL/localStorage';
 
 import {backupDB, restoreDB} from '../BL/backUpAndRestore';
 import {closeDB} from '../BL/Sql';
-import {openDatabase} from 'react-native-sqlite-storage';
 
-import RNFS from 'react-native-fs';
 import DirectoryPickerManager from 'react-native-directory-picker';
-import DocumentPicker from 'react-native-document-picker';
 
 function SettingsScreen({
   navigation,

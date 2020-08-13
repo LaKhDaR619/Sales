@@ -22,16 +22,10 @@ function HomeScreen({navigation, words}) {
 
   return (
     <View style={styles.container}>
-      <Header navigation={navigation} title="Home" />
+      <Header navigation={navigation} title={words.home} />
       <View style={styles.subContaienr}>
         <View style={styles.logoContainer}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.image}
-              source={require('../assets/logo.png')}
-            />
-            <Text style={styles.mainText}>Sales</Text>
-          </View>
+          <Text style={styles.mainText}>Sales</Text>
           <Text style={styles.subText}>{words.subText}</Text>
         </View>
         <View style={styles.navigationContainer}>
@@ -79,21 +73,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
   },
   logoContainer: {
-    flex: 1,
+    flex: 2,
     justifyContent: 'center',
-  },
-  imageContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-  },
-  image: {
-    width: 85,
-    height: 85,
   },
   mainText: {
     fontSize: 45,
     color: 'white',
+    textAlign: 'center',
   },
   subText: {
     color: 'white',
@@ -101,14 +87,19 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   navigationContainer: {
-    flex: 1,
-    justifyContent: 'space-evenly',
+    flex: 3,
+    justifyContent: 'center',
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
-  element: {},
+  element: {
+    width: 150,
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   elementText: {
     color: 'white',
     paddingTop: 10,

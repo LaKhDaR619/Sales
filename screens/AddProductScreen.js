@@ -298,7 +298,7 @@ function AddProductScreen({
                 price: '',
               });
               if (e == '');
-              else if (isNaN(e) || e < 1) return;
+              else if (isNaN(e) || e < 0) return;
               setInputs({
                 ...inputs,
                 price: e,

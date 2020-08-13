@@ -54,10 +54,10 @@ function ProductsScreen({
             flexDirection: lang == 'en' ? 'row' : 'row-reverse',
           },
         ]}>
-        <Text style={styles.text}>{item.LABEL_PRODUCT}</Text>
-        <Text style={styles.text}>{item.QTE_IN_STOCK}</Text>
-        <Text style={styles.text}>{item.PRICE}</Text>
-        <Text style={styles.text}>{item.DESCRIPTION_CAT}</Text>
+        <Text style={[styles.text, {flex: 3}]}>{item.LABEL_PRODUCT}</Text>
+        <Text style={[styles.text, {flex: 2}]}>{item.QTE_IN_STOCK}</Text>
+        <Text style={[styles.text, {flex: 2}]}>{item.PRICE}</Text>
+        <Text style={[styles.text, {flex: 3}]}>{item.DESCRIPTION_CAT}</Text>
       </Animated.View>
     );
   };
@@ -74,6 +74,7 @@ function ProductsScreen({
             data={products}
             reverseHeader={lang == 'en' ? false : true}
             listHeader={[words.label, words.qte, words.price, words.category]}
+            customHeaderFlex={[3, 2, 2, 3]}
             keyExtractor={keyExtractor}
             renderItem={renderItem}
             delFunc={handleDeleteProduct}
